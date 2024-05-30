@@ -65,7 +65,7 @@ const MyPageProfile = () => {
     "/bookmarks.png",
   ]);
 
-  const MyPageProfileName = ["내 글", "팔로우", "스크랩", "메세지"]
+  const MyPageProfileName = ["내 글", "분석", "스크랩", "메세지"]
 
   const handleClick = async (index : any) => {
     switch (index) {
@@ -126,7 +126,7 @@ const MyPageProfile = () => {
           <div className="mr-1 hover:text-[#F4A460]"
             onClick={FollowingClick}>팔로잉 {MyPageProfile?.followee_count}</div>
           <div className="mr-1 hover:text-[#F4A460]"
-            onClick={FollowerClick}>팔로워 {MyPageProfile?.follower_count}</div>
+            >팔로워 {MyPageProfile?.follower_count}</div>
         </div>
         <div className="flex w-full h-[100px] justify-center items-center space-x-5">
           {MyPageProfileIcons.map((icon, index) => (
