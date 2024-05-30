@@ -12,7 +12,7 @@ const nextConfig = {
   },
   env: {
     Localhost: `${process.env.Localhost}`,
-    OnlyiP : `${process.env.Localhost}`,
+    OnlyiP : `${process.env.Localhosts}`,
   },
   images: {
     domains: ['t1.kakaocdn.net', `${process.env.Localhosts}`, 'k.kakaocdn.net' , '10.223.115.184'], 

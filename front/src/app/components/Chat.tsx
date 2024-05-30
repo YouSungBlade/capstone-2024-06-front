@@ -89,7 +89,6 @@ const ChatModal = ({
 
   const [Client, SetClient] = useState<WebSocket | null>(null);
   const OpenWebSoket = (UserId: string) => {
-    console.log(`ws://${process.env.OnlyiP}/chat/${UserId}`)
     const newClient = new WebSocket(
       `ws://${process.env.OnlyiP}/chat/${UserId}`
     );
