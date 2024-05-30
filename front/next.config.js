@@ -1,3 +1,6 @@
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["three"],
@@ -7,6 +10,10 @@ const nextConfig = {
       {
         source: '/what-desk-api/:path*',
         destination: `${process.env.Localhost}/:path*`
+      },
+      {
+        source: '/ws/:path*',
+        destination: `ws://${process.env.Localhosts}/:path*`
       }
     ]
   },
