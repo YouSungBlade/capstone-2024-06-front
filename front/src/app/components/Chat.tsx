@@ -90,7 +90,7 @@ const ChatModal = ({
   const [Client, SetClient] = useState<WebSocket | null>(null);
   const OpenWebSoket = (UserId: string) => {
     const newClient = new WebSocket(
-      `/ws/chat/${UserId}`
+      `api/proxy/chat/${UserId}`
     );
     newClient.onopen = () => {
       newClient.send(
