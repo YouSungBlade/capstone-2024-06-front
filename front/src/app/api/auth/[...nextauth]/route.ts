@@ -36,7 +36,8 @@ const credentialsProvider = CredentialsProvider({
     try {
       console.log(process.env.Localhost)
       console.log(process.env.api_url)
-      const res = await fetch(`/what-desk-api/user/token`, {
+      const url = new URL(`/user/token`, `${process.env.Localhost}`).href;
+      const res = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
